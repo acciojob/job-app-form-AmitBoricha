@@ -1,53 +1,78 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 200px;
+            padding: 5px;
+        }
+
+        .radio-label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
-	<from method="get">
-		<div>
-	<!-- the entire body must be written by student -->
-	<label for="fname">Name*</label>
-	<input type="text" id="fname" name="fname"><br>
-	
-	<label for="femail">Email*</label>
-	<input type="email" id="femail" email=femail><br>
+    <form method="POST">
+        <label for="name">Name*</label>
+        <input type="text" id="name" required>
 
-	<label for="fgender">Gender*</label>
-	<input type="radio"  id="fgender" gender=fgender value="Male">
-	<label for="Male">Male</label>
-	<input type="radio" id="fgender" gender=fgender value="Female">
-    <label for="Female">Female</label><br>                                                            
+        <label for="email">Email*</label>
+        <input type="email" id="email" required>
 
-	<label for="laptop brands">Laptop Brands</label>
-			<select id="brands">
-				<option value="Apple">Apple</option>
-				<option value="Asus">Asus</option>
-				<option value="HP">Hp</option>
-			</select>
+        <label for="gender">Gender</label>
+        <div class="radio-label">
+            <input type="radio" id="gender-male" name="gender" required>
+            <label for="gender-male">Male</label>
+        </div>
+        <div class="radio-label">
+            <input type="radio" id="gender-female" name="gender" required>
+            <label for="gender-female">Female</label>
+        </div>
+        <div class="radio-label">
+            <input type="radio" id="gender-other" name="gender" required>
+            <label for="gender-other">Other</label>
+        </div>
 
-<br>
-		<label for="fage">Age*</label>
-		<input type="text" id="fage" name="fage"><br>
+        <label for="laptop">Laptop Brands</label>
+        <select id="laptop" required>
+            <option value="">-- Select a brand --</option>
+            <option value="Apple">Apple</option>
+            <option value="Asus">Asus</option>
+            <option value="HP">HP</option>
+        </select>
 
-	    <label for="fDOB">DOB*</label>
-		<input type="datetime" id="fDOB" name="fDOB"><br>
-		<label for="fpassword">Password*</label>
-		<input type="password" id="fpassword" name=fpassword > <br> 
-		 <input type="submit" value="Submit">
-		 
-		
-		
-		
-	  </div>
-	</from>
-    <script type="text/javascript" src="./script.js">
-	
-</script>
+        <label for="age">Age</label>
+        <input type="number" id="age" required>
 
+        <label for="dob">DOB*</label>
+        <input type="date" id="dob" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+
+        <label for="portfolio">Portfolio URL</label>
+        <input type="text" id="portfolio">
+
+        <input type="submit" value="Submit" class="submit-btn">
+    </form>
 </body>
 
 </html>
